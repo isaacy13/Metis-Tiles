@@ -1,0 +1,87 @@
+﻿<Window x:Class="Metis.ProfileForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metis"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        mc:Ignorable="d"
+        ui:ThemeManager.RequestedTheme="Light"
+        TextElement.FontWeight="Light"
+        Closing="ProfileForm_Closing"
+        Title="ProfileForm" Height="500" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!-- Create -->
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.45*"/>
+            <!-- Edit -->
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 
+        TODO: in future, add a "preview" feature so they can see what
+        it'll look like
+        -->
+        <TextBlock FontSize="32px" 
+                   Grid.Row="1" 
+                   Grid.Column="1" 
+                   Foreground="Black">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </TextBlock.Style>
+            <TextBlock.Text>
+                Create a New Profile
+            </TextBlock.Text>
+        </TextBlock>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <TextBox Name="newProfileName"
+                     Foreground="Black"
+                     Background="LightGray"
+                     BorderBrush="Black"
+                     BorderThickness="1"
+                     Margin="0 5 0 10"
+                     FontSize="18">
+                Profile
+            </TextBox>
+            <Button Click="addProfile"
+                    Background="LightSeaGreen">Submit</Button>
+        </StackPanel>
+
+        <TextBlock FontSize="32px" Grid.Row="5" Grid.Column="1">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </TextBlock.Style>
+            <TextBlock.Text>
+                Edit Profile(s)
+            </TextBlock.Text>
+        </TextBlock>
+
+        <ScrollViewer Grid.Row="7" Grid.Column="1">
+            <ListView x:Name="ProfileEditListView" 
+                      FontSize="16"/>
+        </ScrollViewer>
+        <Button Grid.Row="8" Grid.Column="1"
+            Click="removeProfile"
+            Background="IndianRed">Remove Selected Profile(s)</Button>
+    </Grid>
+</Window>

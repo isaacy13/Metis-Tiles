@@ -1,0 +1,54 @@
+﻿<Window x:Class="Metis.SpaceForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metis"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:ThemeManager.RequestedTheme="Light"
+        mc:Ignorable="d"
+        TextElement.FontWeight="Light"
+        Title="SpaceForm" Height="500" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock FontSize="32px" Grid.Row="1" Grid.Column="1">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </TextBlock.Style>
+            <TextBlock.Text>
+                Create a New Space
+            </TextBlock.Text>
+        </TextBlock>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <TextBox Name="newSpaceName"
+                     Foreground="Black"
+                     FontSize="20"
+                     Background="LightGray"
+                     BorderBrush="DarkGray"
+                     BorderThickness="1"
+                     Margin="0 5 0 5"
+                     >Space</TextBox>
+            <Button FontWeight="Light" 
+                    Click="addSpace" 
+                    FontSize="18" 
+                    Background="LightSeaGreen">Submit</Button>
+        </StackPanel>
+    </Grid>
+</Window>

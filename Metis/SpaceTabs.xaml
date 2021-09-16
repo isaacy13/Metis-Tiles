@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="Metis.SpaceTabs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Metis"
+             mc:Ignorable="d"
+             d:DesignHeight="100" d:DesignWidth="175"
+             MouseDown="SpaceTabs_OnClick">
+
+    <!-- Custom Space Tab -->
+    <Border x:Name="backgrnd" Cursor="Hand" 
+            MouseEnter="MouseEnter" MouseLeave="MouseLeave">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="Margin" Value="10 5 10 5"/>
+            </Style>
+        </Border.Style>
+
+        <!-- So called "paint of inner area"... -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Tint Overlay
+            used to give button-like appearance -->
+            <Grid 
+                x:Name="TintOverlay"
+                Background="LightBlue"
+                Grid.ColumnSpan="2"
+                Opacity="0"/>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Edit" Click="ChangeIcon" />
+                    </ContextMenu>
+                </TextBlock.ContextMenu>
+                📃
+            </TextBlock>
+
+            <TextBlock x:Name="SpaceName">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Setter Property="Grid.Column" Value="1"/>
+                        <Setter Property="FontSize" Value="18px"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                        <Setter Property="Margin" Value="10 0 0 0"/>
+                    </Style>
+                </TextBlock.Style>
+                <TextBlock.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Rename" Click="RenameSpaceTab" />
+                        <MenuItem Header="Delete" Click="DeleteSpaceTab" />
+                    </ContextMenu>
+                </TextBlock.ContextMenu>
+                <TextBlock.Text>
+                    Default Space
+                </TextBlock.Text>
+            </TextBlock>
+
+            <TextBox x:Name="NewSpaceName"
+                     Text="{Binding ElementName=SpaceName, Path=Text}">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Setter Property="Grid.Column" Value="1"/>
+                        <Setter Property="FontSize" Value="22px"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+        </Grid>
+    </Border>
+</UserControl>

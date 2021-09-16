@@ -1,0 +1,14 @@
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\Tiles.csproj.AssemblyReference.cache
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\PopupConfirm.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\ProfileForm.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\SettingsWindow.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\SpaceForm.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\SpaceTabs.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\TileForm.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\WrapPanelItem.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\Tiles_Content.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\Tiles_MarkupCompile.cache
+C:\Users\Isaac\Downloads\fun coding\Metis\Metis\obj\Debug\netcoreapp3.1\Tiles_MarkupCompile.lref
